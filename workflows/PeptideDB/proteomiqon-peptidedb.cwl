@@ -7,6 +7,7 @@ hints:
     dockerImageId: peptidedb
     dockerFile:
         $include: ./Dockerfile
+baseCommand: ['proteomiqon-peptidedb']
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:

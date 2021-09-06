@@ -7,6 +7,7 @@ hints:
     dockerImageId: proteininference
     dockerFile:
         $include: ./Dockerfile
+baseCommand: ['proteomiqon-proteininference']
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:
