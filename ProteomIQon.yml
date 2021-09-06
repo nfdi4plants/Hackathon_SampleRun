@@ -1,0 +1,40 @@
+cores: 1
+db:
+  class: File
+  path: ./assets/db/ChlamyQProt.db
+stage:
+  class: Directory
+  path: ./assets
+outputMzML:
+  class: Directory
+  path: ./assets/mzlite
+outputPSM:
+  class: Directory
+  path: ./assets/psm
+outputPSMStats:
+  class: Directory
+  path: ./assets/psmstats
+outputQuant:
+  class: Directory
+  path: ./assets/quant
+outputProt:
+  class: Directory
+  path: ./assets/prot
+inputMzML:
+  class: Directory
+  path: ./assets/mzml
+paramsMzML:
+  class: File
+  path: ./assets/preprocessingParams.json
+paramsPSM:
+  class: File
+  path: ./assets/peptideSpectrumMatchingParams.json
+paramsPSMStats:
+  class: File
+  path: ./assets/pSMStatisticsParamsFixed.json
+paramsPSMBasedQuant:
+  class: File
+  path: ./assets/QuantificationParams.json
+paramsProt:
+  class: File
+  path: ./assets/ProteinInferenceParams.json

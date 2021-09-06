@@ -1,0 +1,12 @@
+stageDirectory:
+  class: Directory
+  path: ./assets
+inputFile:
+  class: File
+  path: ./assets/Chlamy_JGI5_5Cp_Mp_QProt.fasta
+params:
+  class: File
+  path: ./assets/params/peptideDBParams.json
+outputDirectory:
+  class: Directory
+  path: ./assets
