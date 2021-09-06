@@ -3,8 +3,11 @@
 cwlVersion: v1.2
 class: CommandLineTool
 hints:
+hints:
   DockerRequirement:
-    dockerPull: csbio/proteomiqon-mzmltomzlite:version0.0.6
+    dockerImageId: mzmltomzlite
+      dockerFile:
+        $include: ./Dockerfile
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:

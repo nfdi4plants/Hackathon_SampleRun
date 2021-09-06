@@ -4,7 +4,9 @@ cwlVersion: v1.2
 class: CommandLineTool
 hints:
   DockerRequirement:
-    dockerPull: csbio/proteomiqon-psmstatistics:version0.0.7
+    dockerImageId: psmstatistics
+      dockerFile:
+        $include: ./Dockerfile
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:
