@@ -4,7 +4,7 @@ cwlVersion: v1.2
 class: CommandLineTool
 hints:
   DockerRequirement:
-    dockerPull: csbio/proteomiqon-peptidespectrummatching:version0.0.5
+    dockerPull: csbio/proteomiqon-peptidespectrummatching:version0.0.7
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:
