@@ -1,5 +1,5 @@
 {
-  "ProteinIdentifierRegex": "\\S+",
+  "ProteinIdentifierRegex": "id",
   "Protein": {
     "Case": "Maximal"
   },
@@ -8,6 +8,6 @@
   },
   "GroupFiles": true,
   "GetQValue": {
-    "Case": "NoQValue"
+    "Case": "Storey"
   }
 }

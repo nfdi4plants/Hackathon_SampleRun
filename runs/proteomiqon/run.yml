@@ -20,9 +20,9 @@ outputQuant:
 outputProt:
   class: Directory
   path: ./../../assays/prot
-inputMzML:
+inputPSM:
   class: Directory
-  path: ./../../assays/mzml
+  path: ./../../assays/mzlite
 paramsMzML:
   class: File
   path: ./mzlite/preprocessingParams.json

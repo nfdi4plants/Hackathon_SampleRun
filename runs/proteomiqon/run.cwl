@@ -14,7 +14,7 @@ inputs:
   outputPSMStats: Directory
   outputQuant: Directory
   outputProt: Directory
-  inputMzML: Directory
+  inputPSM: Directory
   paramsMzML: File
   paramsPSM: File
   paramsPSMStats: File
@@ -22,20 +22,20 @@ inputs:
   paramsProt: File
 
 steps:
-  MzMLToMzlite:
-    run: ./../../workflows/MzMLToMzlite/proteomiqon-mzmltomzlite.cwl
-    in:
-      stageDirectory: stage
-      inputDirectory: inputMzML
-      params: paramsMzML
-      outputDirectory: outputMzML
-      parallelismLevel: cores
-    out: [dir]
+  #MzMLToMzlite:
+  #  run: ./../../workflows/MzMLToMzlite/proteomiqon-mzmltomzlite.cwl
+  #  in:
+  #    stageDirectory: stage
+  #    inputDirectory: inputMzML
+  #    params: paramsMzML
+  #    outputDirectory: outputMzML
+  #    parallelismLevel: cores
+  #  out: [dir]
   PeptideSpectrumMatching:
     run: ./../../workflows/PeptideSpectrumMatching/proteomiqon-peptidespectrummatching.cwl
     in:
       stageDirectory: stage
-      inputDirectory: MzMLToMzlite/dir
+      inputDirectory: inputPSM
       database: db
       params: paramsPSM
       outputDirectory: outputPSM
@@ -55,7 +55,7 @@ steps:
     run: ./../../workflows/PSMBasedQuantification/proteomiqon-psmbasedquantification.cwl
     in:
       stageDirectory: stage
-      inputDirectoryI: MzMLToMzlite/dir
+      inputDirectoryI: inputPSM
       inputDirectoryII: PSMStatistics/dir
       database: db
       params: paramsPSMBasedQuant
@@ -73,9 +73,9 @@ steps:
     out: [dir]
 
 outputs:
-  mzlite:
-    type: Directory
-    outputSource: MzMLToMzlite/dir
+  #mzlite:
+  #  type: Directory
+  #  outputSource: MzMLToMzlite/dir
   psm:
     type: Directory
     outputSource: PeptideSpectrumMatching/dir

@@ -1,0 +1,12 @@
+2021-09-06 13:19:27.0747 ProteinInference_inferProteins TRACE InputFilePath = [|"/qOosPh/psmstats/minimal.qpsm"|] 
+2021-09-06 13:19:27.0989 ProteinInference_inferProteins TRACE InputGFF3Path = None 
+2021-09-06 13:19:27.1092 ProteinInference_inferProteins TRACE OutputFilePath = /qOosPh/prot 
+2021-09-06 13:19:27.1252 ProteinInference_inferProteins TRACE Protein inference parameters = { TryGetProteinIdentifier = <fun:tryParseProteinIdUsing@184>
+  Protein = Maximal
+  Peptide = Minimal
+  GroupFiles = true
+  GetQValue = Storey } 
+2021-09-06 13:19:27.1384 ProteinInference_inferProteins TRACE Copy peptide DB into Memory. 
+2021-09-06 13:19:27.1811 ProteinInference_inferProteins TRACE Copy peptide DB into Memory: finished. 
+2021-09-06 13:19:27.1910 ProteinInference_inferProteins TRACE Start building ClassItemCollection 
+2021-09-06 13:19:27.3532 ProteinInference_inferProteins TRACE Classify and Infer Proteins 

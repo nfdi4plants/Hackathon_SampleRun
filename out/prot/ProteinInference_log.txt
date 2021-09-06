@@ -1,0 +1,8 @@
+2021-09-06 13:19:26.8107 ProteinInference TRACE CLIArguments: [InputFolder ["/qOosPh/psmstats"];
+ PeptideDataBase
+   "/var/lib/cwl/stgc8c4ca61-691e-4223-b5d2-db19cb75c1a6/ChlamyQProt.db";
+ ParamFile
+   "/var/lib/cwl/stg0ea79548-f356-4db4-90ca-a9eb3d027cbf/ProteinInferenceParams.json";
+ OutputDirectory "/qOosPh/prot"] 
+2021-09-06 13:19:26.8490 ProteinInference TRACE Database found at given location (/var/lib/cwl/stgc8c4ca61-691e-4223-b5d2-db19cb75c1a6/ChlamyQProt.db) 
+2021-09-06 13:19:27.0649 ProteinInference TRACE Inputfiles: [|"/qOosPh/psmstats/minimal.qpsm"|] 
