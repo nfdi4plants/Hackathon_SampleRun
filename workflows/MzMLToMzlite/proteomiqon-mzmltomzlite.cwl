@@ -3,10 +3,9 @@
 cwlVersion: v1.2
 class: CommandLineTool
 hints:
-hints:
   DockerRequirement:
     dockerImageId: mzmltomzlite
-      dockerFile:
+    dockerFile:
         $include: ./Dockerfile
 inputs:
   # inputtype that declares the directory to be staged?

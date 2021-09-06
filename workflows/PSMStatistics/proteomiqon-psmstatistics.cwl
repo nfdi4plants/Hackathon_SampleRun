@@ -5,7 +5,7 @@ class: CommandLineTool
 hints:
   DockerRequirement:
     dockerImageId: psmstatistics
-      dockerFile:
+    dockerFile:
         $include: ./Dockerfile
 inputs:
   # inputtype that declares the directory to be staged?
