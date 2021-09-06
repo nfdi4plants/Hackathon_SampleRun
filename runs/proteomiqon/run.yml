@@ -1,40 +1,40 @@
 cores: 1
 db:
   class: File
-  path: ./assets/db/ChlamyQProt.db
+  path: ./../../assays/db/ChlamyQProt.db
 stage:
   class: Directory
-  path: ./assets
+  path: ./../../assays
 outputMzML:
   class: Directory
-  path: ./assets/mzlite
+  path: ./../../assays/mzlite
 outputPSM:
   class: Directory
-  path: ./assets/psm
+  path: ./../../assays/psm
 outputPSMStats:
   class: Directory
-  path: ./assets/psmstats
+  path: ./../../assays/psmstats
 outputQuant:
   class: Directory
-  path: ./assets/quant
+  path: ./../../assays/quant
 outputProt:
   class: Directory
-  path: ./assets/prot
+  path: ./../../assays/prot
 inputMzML:
   class: Directory
-  path: ./assets/mzml
+  path: ./../../assays/mzml
 paramsMzML:
   class: File
-  path: ./assets/preprocessingParams.json
+  path: ./mzlite/preprocessingParams.json
 paramsPSM:
   class: File
-  path: ./assets/peptideSpectrumMatchingParams.json
+  path: ./psm/peptideSpectrumMatchingParams.json
 paramsPSMStats:
   class: File
-  path: ./assets/pSMStatisticsParamsFixed.json
+  path: ./psmstats/pSMStatisticsParamsFixed.json
 paramsPSMBasedQuant:
   class: File
-  path: ./assets/QuantificationParams.json
+  path: ./quant/QuantificationParams.json
 paramsProt:
   class: File
-  path: ./assets/ProteinInferenceParams.json
+  path: ./prot/ProteinInferenceParams.json

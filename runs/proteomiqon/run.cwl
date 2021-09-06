@@ -23,7 +23,7 @@ inputs:
 
 steps:
   MzMLToMzlite:
-    run: ./runs/MzMLToMzlite/proteomiqon-mzmltomzlite.cwl
+    run: ./../../workflows/MzMLToMzlite/proteomiqon-mzmltomzlite.cwl
     in:
       stageDirectory: stage
       inputDirectory: inputMzML
@@ -32,7 +32,7 @@ steps:
       parallelismLevel: cores
     out: [dir]
   PeptideSpectrumMatching:
-    run: ./runs/PeptideSpectrumMatching/proteomiqon-peptidespectrummatching.cwl
+    run: ./../../workflows/PeptideSpectrumMatching/proteomiqon-peptidespectrummatching.cwl
     in:
       stageDirectory: stage
       inputDirectory: MzMLToMzlite/dir
@@ -42,7 +42,7 @@ steps:
       parallelismLevel: cores
     out: [dir]
   PSMStatistics:
-    run: ./runs/PSMStatistics/proteomiqon-psmstatistics.cwl
+    run: ./../../workflows/PSMStatistics/proteomiqon-psmstatistics.cwl
     in:
       stageDirectory: stage
       inputDirectory: PeptideSpectrumMatching/dir
@@ -52,7 +52,7 @@ steps:
       parallelismLevel: cores
     out: [dir]
   PSMBasedQuantification:
-    run: ./runs/PSMBasedQuantification/proteomiqon-psmbasedquantification.cwl
+    run: ./../../workflows/PSMBasedQuantification/proteomiqon-psmbasedquantification.cwl
     in:
       stageDirectory: stage
       inputDirectoryI: MzMLToMzlite/dir
@@ -63,7 +63,7 @@ steps:
       parallelismLevel: cores
     out: [dir]
   ProteinInference:
-    run: ./runs/ProteinInference/proteomiqon-proteininference.cwl
+    run: ./../../workflows/ProteinInference/proteomiqon-proteininference.cwl
     in:
       stageDirectory: stage
       inputDirectory: PSMStatistics/dir
