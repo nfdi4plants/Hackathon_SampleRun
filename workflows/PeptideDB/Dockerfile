@@ -5,9 +5,3 @@ RUN dotnet tool install \
     ProteomIQon.PeptideDB \
         --version 0.0.7 \
         --tool-path /usr/local/bin
-
-# Add tools to PATH
-ENV PATH="${PATH}:/root/.dotnet/tools"
-# Default Docker starting command
-ENTRYPOINT ["proteomiqon-peptidedb"]
-CMD ["--help"]
