@@ -8,18 +8,10 @@ stage:
 outputMzML:
   class: Directory
   path: ./../../assays/mzlite
-outputPSM:
-  class: Directory
-  path: ./../../assays/psm
-outputPSMStats:
-  class: Directory
-  path: ./../../assays/psmstats
-outputQuant:
-  class: Directory
-  path: ./../../assays/quant
-outputProt:
-  class: Directory
-  path: ./../../assays/prot
+outputPSM: psm
+outputPSMStats: psmstats
+outputQuant: quant
+outputProt: prot
 inputPSM:
   class: Directory
   path: ./../../assays/mzlite

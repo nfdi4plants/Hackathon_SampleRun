@@ -28,7 +28,7 @@ inputs:
       position: 3
       prefix: -p
   outputDirectory:
-    type: Directory
+    type: string
     inputBinding:
       position: 4
       prefix: -o
@@ -38,18 +38,16 @@ inputs:
       position: 5
       prefix: -c
 requirements:
+  - class: InlineJavascriptRequirement
   - class: InitialWorkDirRequirement
     listing:
       - entry: $(inputs.inputDirectory)
         writable: true
-      - entry: $(inputs.outputDirectory)
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: "psmstats"
         writable: true
 outputs:
   dir:
     type: Directory
     outputBinding:
-      glob: $(inputs.outputDirectory.basename)
-
-        
-        
-        
+      glob: $(inputs.outputDirectory)

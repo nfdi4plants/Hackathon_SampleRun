@@ -28,22 +28,24 @@ inputs:
       position: 3
       prefix: -p
   outputDirectory:
-    type: Directory
+    type: string
     inputBinding:
       position: 4
       prefix: -o
 requirements:
+  - class: InlineJavascriptRequirement
   - class: InitialWorkDirRequirement
     listing:
       - entry: $(inputs.inputDirectory)
         writable: true
-      - entry: $(inputs.outputDirectory)
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: "prot"
         writable: true
 outputs:
   dir:
     type: Directory
     outputBinding:
-      glob: $(inputs.outputDirectory.basename)
+      glob: $(inputs.outputDirectory)
 
         
         

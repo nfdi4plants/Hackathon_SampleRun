@@ -10,6 +10,15 @@ hints:
 
 baseCommand: [ 'proteomiqon-peptidespectrummatching' ]
 
+requirements:
+  - class: InlineJavascriptRequirement
+  - class: InitialWorkDirRequirement
+    listing:
+      - entry: $(inputs.inputDirectory)
+        writable: true
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: "psm"
+        writable: true
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:
@@ -30,7 +39,7 @@ inputs:
       position: 3
       prefix: -p
   outputDirectory:
-    type: Directory
+    type: string
     inputBinding:
       position: 4
       prefix: -o
@@ -39,18 +48,9 @@ inputs:
     inputBinding:
       position: 5
       prefix: -c
-requirements:
-  - class: InitialWorkDirRequirement
-    listing:
-      - entry: $(inputs.inputDirectory)
-        writable: true
-      #- entry: $(inputs.stageDirectory)
-      #  writable: true
-      - entry: $(inputs.outputDirectory)
-        writable: true
 outputs:
   dir:
     type: Directory
     outputBinding:
-      glob: $(inputs.outputDirectory.basename)
+      glob: $(inputs.outputDirectory)
 

@@ -10,10 +10,10 @@ inputs:
   db: File
   stage: Directory
   outputMzML: Directory
-  outputPSM: Directory
-  outputPSMStats: Directory
-  outputQuant: Directory
-  outputProt: Directory
+  outputPSM: string
+  outputPSMStats: string
+  outputQuant: string
+  outputProt: string
   inputPSM: Directory
   paramsMzML: File
   paramsPSM: File

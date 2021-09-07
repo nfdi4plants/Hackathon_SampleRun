@@ -33,7 +33,7 @@ inputs:
       position: 4
       prefix: -p
   outputDirectory:
-    type: Directory
+    type: string
     inputBinding:
       position: 5
       prefix: -o
@@ -43,19 +43,21 @@ inputs:
       position: 6
       prefix: -c
 requirements:
+  - class: InlineJavascriptRequirement
   - class: InitialWorkDirRequirement
     listing:
       - entry: $(inputs.inputDirectoryI)
         writable: true
       - entry: $(inputs.inputDirectoryII)
         writable: true
-      - entry: $(inputs.outputDirectory)
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: "quant"
         writable: true
 outputs:
   dir:
     type: Directory
     outputBinding:
-      glob: $(inputs.outputDirectory.basename)
+      glob: $(inputs.outputDirectory)
 
         
         
