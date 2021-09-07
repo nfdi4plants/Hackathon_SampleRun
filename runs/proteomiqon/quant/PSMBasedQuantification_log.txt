@@ -1,0 +1,11 @@
+2021-09-07 09:57:30.1327 PSMBasedQuantification TRACE CLIArguments: [InstrumentOutput ["/FuNLno/mzlite"]; ScoredPSMs ["/FuNLno/psmstats"];
+ PeptideDataBase
+   "/var/lib/cwl/stg6329c870-ac92-4e2b-ad3f-552b734033ca/ChlamyQProt.db";
+ ParamFile
+   "/var/lib/cwl/stg1fa95003-4a00-4c13-bca4-d0d31164bf56/QuantificationParams.json";
+ OutputDirectory "quant"; Parallelism_Level 1] 
+2021-09-07 09:57:30.2909 PSMBasedQuantification TRACE Database found at given location (/var/lib/cwl/stg6329c870-ac92-4e2b-ad3f-552b734033ca/ChlamyQProt.db) 
+2021-09-07 09:57:30.3780 PSMBasedQuantification TRACE Set Index on data base if not present. 
+2021-09-07 09:57:30.4042 PSMBasedQuantification TRACE Set Index on data base if not present: finished 
+2021-09-07 09:57:30.4278 PSMBasedQuantification TRACE mz files : [|"/FuNLno/mzlite/minimal.mzlite"|] 
+2021-09-07 09:57:30.4278 PSMBasedQuantification TRACE PEP files : [|"/FuNLno/psmstats/minimal.qpsm"|] 

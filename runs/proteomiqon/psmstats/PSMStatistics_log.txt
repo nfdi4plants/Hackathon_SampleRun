@@ -1,0 +1,8 @@
+2021-09-07 09:57:28.1542 PSMStatistics TRACE CLIArguments: [PSMs ["/FuNLno/psm"];
+ PeptideDataBase
+   "/var/lib/cwl/stgeabab1f9-cf36-47c5-b855-f7f89c19b249/ChlamyQProt.db";
+ ParamFile
+   "/var/lib/cwl/stg389a5cc5-7b8f-4a1a-852b-e84273c2b3f0/pSMStatisticsParamsFixed.json";
+ OutputDirectory "psmstats"; Parallelism_Level 1] 
+2021-09-07 09:57:28.3058 PSMStatistics TRACE Database found at given location (/var/lib/cwl/stgeabab1f9-cf36-47c5-b855-f7f89c19b249/ChlamyQProt.db) 
+2021-09-07 09:57:28.3917 PSMStatistics TRACE Processing /FuNLno/psm/minimal.psm 

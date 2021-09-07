@@ -1,0 +1,10 @@
+2021-09-07 09:57:33.4297 ProteinInference_readAndInferFile TRACE Getting proteins with peptide sequence from db 
+2021-09-07 09:57:33.4544 ProteinInference_readAndInferFile TRACE Perfom digestion on reversed proteins for decoy set 
+2021-09-07 09:57:33.4741 ProteinInference_readAndInferFile TRACE Map peptide sequences to proteins 
+2021-09-07 09:57:33.4871 ProteinInference_readAndInferFile TRACE Create combined list 
+2021-09-07 09:57:33.5080 ProteinInference_readAndInferFile TRACE Create a map with peptide scores 
+2021-09-07 09:57:33.5193 ProteinInference_readAndInferFile TRACE Assign scores to decoy set 
+2021-09-07 09:57:33.5291 ProteinInference_readAndInferFile TRACE Assign target and decoy scores inferred proteins 
+2021-09-07 09:57:33.5499 ProteinInference_readAndInferFile TRACE Calculate q values for all proteins 
+2021-09-07 09:57:33.6918 ProteinInference_readAndInferFile TRACE Writing now minimal 
+2021-09-07 09:57:33.7180 ProteinInference_readAndInferFile TRACE File written to /FuNLno/prot/minimal.prot 

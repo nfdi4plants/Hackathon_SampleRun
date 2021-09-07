@@ -1,0 +1,8 @@
+2021-09-07 09:57:25.7561 PeptideSpectrumMatching TRACE CLIArguments: [InstrumentOutput ["/FuNLno/mzlite"];
+ PeptideDataBase
+   "/var/lib/cwl/stg6b23f349-878e-46c6-9b76-811530dec910/ChlamyQProt.db";
+ ParamFile
+   "/var/lib/cwl/stg7d97a9f7-6c54-4978-b224-8c872ae6e1a7/peptideSpectrumMatchingParams.json";
+ OutputDirectory "psm"; Parallelism_Level 1] 
+2021-09-07 09:57:25.7899 PeptideSpectrumMatching TRACE Database found at given location (/var/lib/cwl/stg6b23f349-878e-46c6-9b76-811530dec910/ChlamyQProt.db) 
+2021-09-07 09:57:25.9761 PeptideSpectrumMatching TRACE Scoring spectra for /FuNLno/mzlite/minimal.mzlite 
