@@ -7,6 +7,7 @@ hints:
     dockerImageId: mzmltomzlite
     dockerFile:
         $include: ./Dockerfile
+baseCommand: ['proteomiqon-mzmltomzlite']
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:

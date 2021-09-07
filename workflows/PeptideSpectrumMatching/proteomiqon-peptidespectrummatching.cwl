@@ -7,6 +7,9 @@ hints:
     dockerImageId: peptidespectrummatching
     dockerFile:
         $include: ./Dockerfile
+
+baseCommand: [ 'proteomiqon-peptidespectrummatching' ]
+
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:
@@ -50,6 +53,4 @@ outputs:
     type: Directory
     outputBinding:
       glob: $(inputs.outputDirectory.basename)
-        
-        
-        
+

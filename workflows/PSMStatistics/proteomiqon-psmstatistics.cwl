@@ -7,6 +7,7 @@ hints:
     dockerImageId: psmstatistics
     dockerFile:
         $include: ./Dockerfile
+baseCommand: ['proteomiqon-psmstatistics']
 inputs:
   # inputtype that declares the directory to be staged?
   stageDirectory:
