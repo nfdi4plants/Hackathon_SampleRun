@@ -9,9 +9,6 @@ hints:
         $include: ./Dockerfile
 baseCommand: ['proteomiqon-psmbasedquantification']
 inputs:
-  # inputtype that declares the directory to be staged?
-  stageDirectory:
-    type: Directory
   inputDirectoryI:
     type: Directory
     inputBinding:

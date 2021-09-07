@@ -9,9 +9,6 @@ hints:
         $include: ./Dockerfile
 baseCommand: ['proteomiqon-proteininference']
 inputs:
-  # inputtype that declares the directory to be staged?
-  stageDirectory:
-    type: Directory
   inputDirectory:
     type: Directory
     inputBinding:

@@ -8,7 +8,6 @@ requirements:
 inputs:
   cores: int
   db: File
-  stage: Directory
   outputMzML: Directory
   outputPSM: string
   outputPSMStats: string
@@ -34,7 +33,6 @@ steps:
   PeptideSpectrumMatching:
     run: ./../../workflows/PeptideSpectrumMatching/proteomiqon-peptidespectrummatching.cwl
     in:
-      stageDirectory: stage
       inputDirectory: inputPSM
       database: db
       params: paramsPSM
@@ -44,7 +42,6 @@ steps:
   PSMStatistics:
     run: ./../../workflows/PSMStatistics/proteomiqon-psmstatistics.cwl
     in:
-      stageDirectory: stage
       inputDirectory: PeptideSpectrumMatching/dir
       database: db
       params: paramsPSMStats
@@ -54,7 +51,6 @@ steps:
   PSMBasedQuantification:
     run: ./../../workflows/PSMBasedQuantification/proteomiqon-psmbasedquantification.cwl
     in:
-      stageDirectory: stage
       inputDirectoryI: inputPSM
       inputDirectoryII: PSMStatistics/dir
       database: db
@@ -65,7 +61,6 @@ steps:
   ProteinInference:
     run: ./../../workflows/ProteinInference/proteomiqon-proteininference.cwl
     in:
-      stageDirectory: stage
       inputDirectory: PSMStatistics/dir
       database: db
       params: paramsProt

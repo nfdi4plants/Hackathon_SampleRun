@@ -2,9 +2,6 @@ cores: 1
 db:
   class: File
   path: ./../../assays/db/ChlamyQProt.db
-stage:
-  class: Directory
-  path: ./../../assays
 outputMzML:
   class: Directory
   path: ./../../assays/mzlite
