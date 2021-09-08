@@ -10,7 +10,7 @@ inputDB:
   path: ./../../externals/example.fasta
 inputPSM:
   class: Directory
-  path: ./../../assays/mzlite
+  path: ./../../assays/assay1/dataset
 paramsDB:
   class: File
   path: ./db/peptideDBParams.json
