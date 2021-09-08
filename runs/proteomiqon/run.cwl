@@ -7,13 +7,15 @@ requirements:
 
 inputs:
   cores: int
-  db: File
-  outputMzML: Directory
+  outputDB: string
+  outputMzML: string
   outputPSM: string
   outputPSMStats: string
   outputQuant: string
   outputProt: string
+  inputDB: File
   inputPSM: Directory
+  paramsDB: File
   paramsMzML: File
   paramsPSM: File
   paramsPSMStats: File
@@ -30,11 +32,18 @@ steps:
   #    outputDirectory: outputMzML
   #    parallelismLevel: cores
   #  out: [dir]
+  PeptideDB:
+    run: ./../../workflows/PeptideDB/proteomiqon-peptidedb.cwl
+    in:
+      inputFile: inputDB
+      params: paramsDB
+      outputDirectory: outputDB
+    out: [db]
   PeptideSpectrumMatching:
     run: ./../../workflows/PeptideSpectrumMatching/proteomiqon-peptidespectrummatching.cwl
     in:
       inputDirectory: inputPSM
-      database: db
+      database: PeptideDB/db
       params: paramsPSM
       outputDirectory: outputPSM
       parallelismLevel: cores
@@ -43,7 +52,7 @@ steps:
     run: ./../../workflows/PSMStatistics/proteomiqon-psmstatistics.cwl
     in:
       inputDirectory: PeptideSpectrumMatching/dir
-      database: db
+      database: PeptideDB/db
       params: paramsPSMStats
       outputDirectory: outputPSMStats
       parallelismLevel: cores
@@ -53,7 +62,7 @@ steps:
     in:
       inputDirectoryI: inputPSM
       inputDirectoryII: PSMStatistics/dir
-      database: db
+      database: PeptideDB/db
       params: paramsPSMBasedQuant
       outputDirectory: outputQuant
       parallelismLevel: cores
@@ -62,7 +71,7 @@ steps:
     run: ./../../workflows/ProteinInference/proteomiqon-proteininference.cwl
     in:
       inputDirectory: PSMStatistics/dir
-      database: db
+      database: PeptideDB/db
       params: paramsProt
       outputDirectory: outputProt
     out: [dir]
@@ -71,6 +80,9 @@ outputs:
   #mzlite:
   #  type: Directory
   #  outputSource: MzMLToMzlite/dir
+  #peptidedb:
+  #  type: File
+  #  outputSource: PeptideDB/db
   psm:
     type: Directory
     outputSource: PeptideSpectrumMatching/dir

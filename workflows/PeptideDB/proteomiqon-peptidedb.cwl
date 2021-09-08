@@ -20,7 +20,7 @@ inputs:
       position: 2
       prefix: -p
   outputDirectory:
-    type: Directory
+    type: string
     inputBinding:
       position: 3
       prefix: -o
@@ -28,19 +28,15 @@ requirements:
   - class: InlineJavascriptRequirement
   - class: InitialWorkDirRequirement
     listing:
-      - entry: $(inputs.outputDirectory)
-        writable: true
-      - entry: $(inputs.stageDirectory)
-        writable: true
       - entry: "$({class: 'Directory', listing: []})"
-        entryname: input.outputDirectory
+        entryname: inputs.outputDirectory
         writable: true
 outputs:
-  dir:
-    type: Directory
+  db:
+    type: File
     outputBinding:
-      # glob: "*/*.db"
-      glob: $(inputs.outputDirectory.basename)
+      glob: "*/*.db"
+      #glob: $(inputs.outputDirectory)
         
         
         
