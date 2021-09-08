@@ -38,7 +38,7 @@ steps:
       inputFile: inputDB
       params: paramsDB
       outputDirectory: outputDB
-    out: [db]
+    out: [db, dbFolder]
   PeptideSpectrumMatching:
     run: ./../../workflows/PeptideSpectrumMatching/proteomiqon-peptidespectrummatching.cwl
     in:
@@ -80,9 +80,9 @@ outputs:
   #mzlite:
   #  type: Directory
   #  outputSource: MzMLToMzlite/dir
-  #peptidedb:
-  #  type: File
-  #  outputSource: PeptideDB/db
+  peptidedb:
+    type: Directory
+    outputSource: PeptideDB/dbFolder
   psm:
     type: Directory
     outputSource: PeptideSpectrumMatching/dir

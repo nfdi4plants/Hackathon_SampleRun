@@ -1,0 +1,71 @@
+2021-09-08 05:20:36.5920 PeptideDB_Minimal TRACE Initializing PeptideDB at: /JlacOo/db 
+2021-09-08 05:20:36.6209 PeptideDB_Minimal TRACE searchDBParams: { Name = "Minimal"
+  DbFolder = "/JlacOo/db"
+  FastaPath =
+             "/var/lib/cwl/stgd36fb68e-fa84-4a21-8fae-d88614526a88/example.fasta"
+  FastaHeaderToName = <fun:parseProteinIdUsing@179-1>
+  Protease = { Name = "Trypsin"
+               Expression = <fun:Trypsin@175> }
+  MinMissedCleavages = 0
+  MaxMissedCleavages = 2
+  MaxMass = 15000.0
+  MinPepLength = 4
+  MaxPepLength = 65
+  IsotopicMod = [{ Name = "N15"
+                   SourceEl = Di { Symbol = "N"
+                                   X = { AtomicSymbol = "N"
+                                         AtomicNumberZ = 7
+                                         MassNumber = 14
+                                         Mass = 14.003074
+                                         NatAbundance = 0.99636
+                                         RelAtomicMass = 14.0067 }
+                                   Xcomp = 0.99636
+                                   X1 = { AtomicSymbol = "N"
+                                          AtomicNumberZ = 7
+                                          MassNumber = 15
+                                          Mass = 15.0001089
+                                          NatAbundance = 0.00364
+                                          RelAtomicMass = 14.0067 }
+                                   X1comp = 0.00364
+                                   Root = -273.7252747 }
+                   TargetEl = Di { Symbol = "N15"
+                                   X = { AtomicSymbol = "N"
+                                         AtomicNumberZ = 7
+                                         MassNumber = 15
+                                         Mass = 15.0001089
+                                         NatAbundance = 0.00364
+                                         RelAtomicMass = 14.0067 }
+                                   Xcomp = 0.99636
+                                   X1 = { AtomicSymbol = "N"
+                                          AtomicNumberZ = 7
+                                          MassNumber = 14
+                                          Mass = 14.003074
+                                          NatAbundance = 0.99636
+                                          RelAtomicMass = 14.0067 }
+                                   X1comp = 0.00364
+                                   Root = -273.7252747 } }]
+  MassMode = Monoisotopic
+  MassFunction = <fun:memoizeP@25>
+  FixedMods = []
+  VariableMods =
+                [{ Name = "Oxidation'Met'"
+                   Accession = "35"
+                   Description = "Oxidation"
+                   IsBiological = true
+                   Composition = "O"
+                   Site = [Specific (Met, Residual)]
+                   MType = Plus
+                   XModCode = "ox" };
+                 { Name = "Acetyl(Protein N-Term)"
+                   Accession = "1"
+                   Description = "Acetylation of the protein N-terminus"
+                   IsBiological = true
+                   Composition = "C2H2O"
+                   Site = [Any ProteinNterm]
+                   MType = Plus
+                   XModCode = "ac" }]
+  VarModThreshold = 4 } 
+2021-09-08 05:20:37.0594 PeptideDB_Minimal TRACE Successfully created PeptideDB 
+2021-09-08 05:20:37.0594 PeptideDB_Minimal TRACE Set Index on data base if not present. 
+2021-09-08 05:20:37.0831 PeptideDB_Minimal TRACE Set Index on data base if not present: finished 
+2021-09-08 05:20:37.0831 PeptideDB_Minimal TRACE Done 

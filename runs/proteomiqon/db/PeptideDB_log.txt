@@ -1,0 +1,4 @@
+2021-09-08 05:20:36.4056 PeptideDB TRACE CLIArguments [FastaPath "/var/lib/cwl/stgd36fb68e-fa84-4a21-8fae-d88614526a88/example.fasta";
+ ParamFile
+   "/var/lib/cwl/stgfe5909ab-f46b-40fd-9ac5-35c789490400/peptideDBParams.json";
+ OutputDirectory "db"] 

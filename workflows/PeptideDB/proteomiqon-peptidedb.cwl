@@ -36,7 +36,10 @@ outputs:
     type: File
     outputBinding:
       glob: "*/*.db"
-      #glob: $(inputs.outputDirectory)
+  dbFolder:
+    type: Directory
+    outputBinding:
+      glob: $(inputs.outputDirectory)
         
         
         
