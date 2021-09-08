@@ -36,7 +36,7 @@ requirements:
       - entry: $(inputs.inputDirectory)
         writable: true
       - entry: "$({class: 'Directory', listing: []})"
-        entryname: "prot"
+        entryname: inputs.outputDirectory
         writable: true
 outputs:
   dir:

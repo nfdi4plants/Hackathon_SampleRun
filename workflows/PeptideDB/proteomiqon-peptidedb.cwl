@@ -9,9 +9,6 @@ hints:
         $include: ./Dockerfile
 baseCommand: ['proteomiqon-peptidedb']
 inputs:
-  # inputtype that declares the directory to be staged?
-  stageDirectory:
-    type: Directory
   inputFile:
     type: File
     inputBinding:
@@ -28,11 +25,15 @@ inputs:
       position: 3
       prefix: -o
 requirements:
+  - class: InlineJavascriptRequirement
   - class: InitialWorkDirRequirement
     listing:
       - entry: $(inputs.outputDirectory)
         writable: true
       - entry: $(inputs.stageDirectory)
+        writable: true
+      - entry: "$({class: 'Directory', listing: []})"
+        entryname: input.outputDirectory
         writable: true
 outputs:
   dir:

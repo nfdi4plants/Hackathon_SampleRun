@@ -41,7 +41,7 @@ requirements:
       - entry: $(inputs.inputDirectory)
         writable: true
       - entry: "$({class: 'Directory', listing: []})"
-        entryname: "psmstats"
+        entryname: inputs.OutputDirectory
         writable: true
 outputs:
   dir:

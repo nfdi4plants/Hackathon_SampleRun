@@ -48,7 +48,7 @@ requirements:
       - entry: $(inputs.inputDirectoryII)
         writable: true
       - entry: "$({class: 'Directory', listing: []})"
-        entryname: "quant"
+        entryname: inputs.OutputDirectory
         writable: true
 outputs:
   dir:
