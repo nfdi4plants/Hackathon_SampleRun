@@ -1,0 +1,46 @@
+2021-09-08 09:18:28.2801 minimal2 TRACE Input file: /YDHsjM/dataset/minimal2.mzlite 
+2021-09-08 09:18:28.2875 minimal2 TRACE Output directory: /YDHsjM/quant 
+2021-09-08 09:18:28.2875 minimal2 TRACE Parameters: { PerformLabeledQuantification = true
+  XicExtraction =
+                 { ScanTimeWindow = 2.0
+                   MzWindow_Da = Fixed 0.7
+                   XicProcessing =
+                                  Wavelet
+                                    { Borderpadding = None
+                                      BorderPadMethod = Random
+                                      InternalPaddingMethod =
+                                                             LinearInterpolation
+                                      HugeGapPaddingMethod = Zero
+                                      HugeGapPaddingDistance = 100.0
+                                      MinPeakDistance = None
+                                      MinPeakLength = Some 0.1
+                                      MaxPeakLength = 1.5
+                                      NoiseQuantile = 0.01
+                                      MinSNR = 0.01 }
+                   TopKPSMs = None }
+  BaseLineCorrection = Some { MaxIterations = 10
+                              Lambda = 6
+                              P = 0.05 } } 
+2021-09-08 09:18:28.2875 minimal2 TRACE Now performing Quantification using: /YDHsjM/dataset/minimal2.mzlite and /YDHsjM/psmstats/minimal2.qpsm, Results will be written to: /YDHsjM/quant 
+2021-09-08 09:18:28.2982 minimal2 TRACE outFilePath:/YDHsjM/quant/minimal2.quant 
+2021-09-08 09:18:28.3064 minimal2 TRACE plotDirectory:/YDHsjM/quant/minimal2_plots 
+2021-09-08 09:18:28.3064 minimal2 TRACE Copy peptide DB into Memory 
+2021-09-08 09:18:28.3064 minimal2 TRACE Copy peptide DB into Memory: finished 
+2021-09-08 09:18:28.3164 minimal2 TRACE Get peptide lookUp function 
+2021-09-08 09:18:28.3164 minimal2 TRACE Get peptide lookUp function: finished 
+2021-09-08 09:18:28.3164 minimal2 TRACE Init connection to mass spectrum data. 
+2021-09-08 09:18:28.3540 minimal2 TRACE Create RetentionTime index 
+2021-09-08 09:18:28.3876 minimal2 TRACE Create RetentionTime index:finished 
+2021-09-08 09:18:28.3876 minimal2 TRACE Read and sort ms1s 
+2021-09-08 09:18:28.4148 minimal2 TRACE Read and sort ms1s:finished 
+2021-09-08 09:18:28.4235 minimal2 TRACE Read scored PSMs 
+2021-09-08 09:18:28.4335 minimal2 TRACE Read scored PSMs:finished 
+2021-09-08 09:18:28.4362 minimal2 TRACE Estimate precursor mz standard deviation and mz correction. 
+2021-09-08 09:18:28.4362 minimal2 TRACE Estimate precursor mz standard deviation and mz correction.:finished, standard deviation: 0.000920 
+2021-09-08 09:18:28.4362 minimal2 TRACE init lookup functions 
+2021-09-08 09:18:28.4362 minimal2 TRACE init lookup functions:finished 
+2021-09-08 09:18:28.4487 minimal2 TRACE init quantification functions 
+2021-09-08 09:18:28.4487 minimal2 TRACE init quantification functions:finished 
+2021-09-08 09:18:28.4487 minimal2 TRACE executing quantification 
+2021-09-08 09:18:28.4578 minimal2 TRACE 0 peptides quantified 
+2021-09-08 09:18:28.5903 minimal2 TRACE executing quantification:finished 

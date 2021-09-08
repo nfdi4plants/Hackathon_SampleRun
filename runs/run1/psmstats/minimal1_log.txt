@@ -1,0 +1,16 @@
+2021-09-08 09:18:22.6418 minimal1 TRACE Input file: /YDHsjM/psm/minimal1.psm 
+2021-09-08 09:18:22.6538 minimal1 TRACE Output directory: /YDHsjM/psmstats 
+2021-09-08 09:18:22.6638 minimal1 TRACE Parameters: { Threshold = Fixed { SequestLike = 5.0
+                      Andromeda = 40.0 }
+  FastaHeaderToName = <fun:parseProteinIdUsing@177>
+  KeepTemporaryFiles = true } 
+2021-09-08 09:18:22.6686 minimal1 TRACE Now performing peptide spectrum matching: /YDHsjM/psm/minimal1.psm Results will be written to: /YDHsjM/psmstats 
+2021-09-08 09:18:22.6782 minimal1 TRACE outFilePath:/YDHsjM/psmstats/minimal1.qpsm 
+2021-09-08 09:18:22.6782 minimal1 TRACE plotDirectory:/YDHsjM/psmstats/minimal1_plots 
+2021-09-08 09:18:22.6782 minimal1 TRACE Copy peptide DB into Memory 
+2021-09-08 09:18:22.7082 minimal1 TRACE Copy peptide DB into Memory: finished 
+2021-09-08 09:18:22.7082 minimal1 TRACE Read scored PSMs. 
+2021-09-08 09:18:22.7426 minimal1 TRACE Read scored PSMs: finished 
+2021-09-08 09:18:22.7534 minimal1 TRACE Prepare processing functions. 
+2021-09-08 09:18:22.7592 minimal1 TRACE Finished preparing processing functions. 
+2021-09-08 09:18:22.7788 minimal1 TRACE Number of results: 3 

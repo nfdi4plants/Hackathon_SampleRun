@@ -1,11 +1,14 @@
-2021-09-07 09:57:30.1327 PSMBasedQuantification TRACE CLIArguments: [InstrumentOutput ["/FuNLno/mzlite"]; ScoredPSMs ["/FuNLno/psmstats"];
+2021-09-08 09:18:27.1279 PSMBasedQuantification TRACE CLIArguments: [InstrumentOutput ["/YDHsjM/dataset"]; ScoredPSMs ["/YDHsjM/psmstats"];
  PeptideDataBase
-   "/var/lib/cwl/stg6329c870-ac92-4e2b-ad3f-552b734033ca/ChlamyQProt.db";
+   "/var/lib/cwl/stg033e2d36-2b0e-4346-8375-7b9f00359e05/Minimal.db";
  ParamFile
-   "/var/lib/cwl/stg1fa95003-4a00-4c13-bca4-d0d31164bf56/QuantificationParams.json";
+   "/var/lib/cwl/stg28f52b17-3960-4d8f-b044-98facf9de364/QuantificationParams.json";
  OutputDirectory "quant"; Parallelism_Level 1] 
-2021-09-07 09:57:30.2909 PSMBasedQuantification TRACE Database found at given location (/var/lib/cwl/stg6329c870-ac92-4e2b-ad3f-552b734033ca/ChlamyQProt.db) 
-2021-09-07 09:57:30.3780 PSMBasedQuantification TRACE Set Index on data base if not present. 
-2021-09-07 09:57:30.4042 PSMBasedQuantification TRACE Set Index on data base if not present: finished 
-2021-09-07 09:57:30.4278 PSMBasedQuantification TRACE mz files : [|"/FuNLno/mzlite/minimal.mzlite"|] 
-2021-09-07 09:57:30.4278 PSMBasedQuantification TRACE PEP files : [|"/FuNLno/psmstats/minimal.qpsm"|] 
+2021-09-08 09:18:27.2974 PSMBasedQuantification TRACE Database found at given location (/var/lib/cwl/stg033e2d36-2b0e-4346-8375-7b9f00359e05/Minimal.db) 
+2021-09-08 09:18:27.3782 PSMBasedQuantification TRACE Set Index on data base if not present. 
+2021-09-08 09:18:27.4049 PSMBasedQuantification TRACE Set Index on data base if not present: finished 
+2021-09-08 09:18:27.4266 PSMBasedQuantification TRACE mz files : [|"/YDHsjM/dataset/minimal1.mzlite"; "/YDHsjM/dataset/minimal2.mzlite";
+  "/YDHsjM/dataset/minimal3.mzlite"; "/YDHsjM/dataset/minimal4.mzlite"|] 
+2021-09-08 09:18:27.4266 PSMBasedQuantification TRACE PEP files : [|"/YDHsjM/psmstats/minimal1.qpsm"; "/YDHsjM/psmstats/minimal2.qpsm";
+  "/YDHsjM/psmstats/minimal3.qpsm"; "/YDHsjM/psmstats/minimal4.qpsm"|] 
+2021-09-08 09:18:27.4415 PSMBasedQuantification TRACE Program is running on 1 cores 

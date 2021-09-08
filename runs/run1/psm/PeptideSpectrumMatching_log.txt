@@ -1,8 +1,10 @@
-2021-09-07 09:57:25.7561 PeptideSpectrumMatching TRACE CLIArguments: [InstrumentOutput ["/FuNLno/mzlite"];
+2021-09-08 09:18:19.3537 PeptideSpectrumMatching TRACE CLIArguments: [InstrumentOutput ["/YDHsjM/dataset"];
  PeptideDataBase
-   "/var/lib/cwl/stg6b23f349-878e-46c6-9b76-811530dec910/ChlamyQProt.db";
+   "/var/lib/cwl/stg0d5f9715-a95c-4464-aa32-6400aaa3657d/Minimal.db";
  ParamFile
-   "/var/lib/cwl/stg7d97a9f7-6c54-4978-b224-8c872ae6e1a7/peptideSpectrumMatchingParams.json";
+   "/var/lib/cwl/stg913b968d-0ded-463e-8926-8591cbc8308b/peptideSpectrumMatchingParams.json";
  OutputDirectory "psm"; Parallelism_Level 1] 
-2021-09-07 09:57:25.7899 PeptideSpectrumMatching TRACE Database found at given location (/var/lib/cwl/stg6b23f349-878e-46c6-9b76-811530dec910/ChlamyQProt.db) 
-2021-09-07 09:57:25.9761 PeptideSpectrumMatching TRACE Scoring spectra for /FuNLno/mzlite/minimal.mzlite 
+2021-09-08 09:18:19.3876 PeptideSpectrumMatching TRACE Database found at given location (/var/lib/cwl/stg0d5f9715-a95c-4464-aa32-6400aaa3657d/Minimal.db) 
+2021-09-08 09:18:19.5828 PeptideSpectrumMatching TRACE Scoring multiple files: [|"/YDHsjM/dataset/minimal1.mzlite"; "/YDHsjM/dataset/minimal2.mzlite";
+  "/YDHsjM/dataset/minimal3.mzlite"; "/YDHsjM/dataset/minimal4.mzlite"|] 
+2021-09-08 09:18:19.5961 PeptideSpectrumMatching TRACE Program is running on 1 cores 

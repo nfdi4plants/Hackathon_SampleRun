@@ -1,8 +1,10 @@
-2021-09-07 09:57:28.1542 PSMStatistics TRACE CLIArguments: [PSMs ["/FuNLno/psm"];
+2021-09-08 09:18:22.3847 PSMStatistics TRACE CLIArguments: [PSMs ["/YDHsjM/psm"];
  PeptideDataBase
-   "/var/lib/cwl/stgeabab1f9-cf36-47c5-b855-f7f89c19b249/ChlamyQProt.db";
+   "/var/lib/cwl/stg4a5f61b2-3355-48cd-bf1a-bb05bc4f8062/Minimal.db";
  ParamFile
-   "/var/lib/cwl/stg389a5cc5-7b8f-4a1a-852b-e84273c2b3f0/pSMStatisticsParamsFixed.json";
+   "/var/lib/cwl/stg30675f59-9187-4f70-98fa-cffe79774679/pSMStatisticsParamsFixed.json";
  OutputDirectory "psmstats"; Parallelism_Level 1] 
-2021-09-07 09:57:28.3058 PSMStatistics TRACE Database found at given location (/var/lib/cwl/stgeabab1f9-cf36-47c5-b855-f7f89c19b249/ChlamyQProt.db) 
-2021-09-07 09:57:28.3917 PSMStatistics TRACE Processing /FuNLno/psm/minimal.psm 
+2021-09-08 09:18:22.5312 PSMStatistics TRACE Database found at given location (/var/lib/cwl/stg4a5f61b2-3355-48cd-bf1a-bb05bc4f8062/Minimal.db) 
+2021-09-08 09:18:22.6172 PSMStatistics TRACE Processing multiple files: [|"/YDHsjM/psm/minimal1.psm"; "/YDHsjM/psm/minimal2.psm";
+  "/YDHsjM/psm/minimal3.psm"; "/YDHsjM/psm/minimal4.psm"|] 
+2021-09-08 09:18:22.6307 PSMStatistics TRACE Program is running on 1 cores 
