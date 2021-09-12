@@ -1,9 +1,0 @@
-2021-09-08 09:18:24.6709 ProteinInference TRACE CLIArguments: [InputFolder ["/YDHsjM/psmstats"];
- PeptideDataBase
-   "/var/lib/cwl/stgdddd854e-69da-4075-a168-721c25f724a9/Minimal.db";
- ParamFile
-   "/var/lib/cwl/stg0b674556-1709-4d2c-9a18-3521efd66a63/ProteinInferenceParams.json";
- OutputDirectory "prot"] 
-2021-09-08 09:18:24.7087 ProteinInference TRACE Database found at given location (/var/lib/cwl/stgdddd854e-69da-4075-a168-721c25f724a9/Minimal.db) 
-2021-09-08 09:18:24.8982 ProteinInference TRACE Inputfiles: [|"/YDHsjM/psmstats/minimal1.qpsm"; "/YDHsjM/psmstats/minimal2.qpsm";
-  "/YDHsjM/psmstats/minimal3.qpsm"; "/YDHsjM/psmstats/minimal4.qpsm"|] 

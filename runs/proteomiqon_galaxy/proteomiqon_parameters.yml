@@ -1,0 +1,10 @@
+Input1:
+  class: File
+  path: sampledata/sample.fasta
+Input2:
+  class: Collection
+  collection_type: list
+  elements:
+  - class: File
+    identifier: sample.mzlite
+    path: sampledata/sample.mzlite

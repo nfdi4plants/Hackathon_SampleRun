@@ -1,0 +1,6 @@
+workflowInputParams:
+  class: File
+  path: proteomiqon_parameters.yml
+inputDataFolder:
+  class: Directory
+  path: ../../assays/sampledata/

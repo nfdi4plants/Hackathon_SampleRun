@@ -1,0 +1,305 @@
+{
+    "a_galaxy_workflow": "true",
+    "annotation": "",
+    "format-version": "0.1",
+    "name": "ProteinIdentificationMzML (imported from uploaded file)",
+    "steps": {
+        "0": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 0,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Input2"
+                }
+            ],
+            "label": "Input2",
+            "name": "Input dataset collection",
+            "outputs": [],
+            "position": {
+                "bottom": 229.140625,
+                "height": 61,
+                "left": -387.1640625,
+                "right": -187.1640625,
+                "top": 168.140625,
+                "width": 200,
+                "x": -387.1640625,
+                "y": 168.140625
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
+            "tool_version": null,
+            "type": "data_collection_input",
+            "uuid": "319df1c3-54c3-4c86-9e96-8cbce1ae6565",
+            "workflow_outputs": []
+        },
+        "1": {
+            "annotation": "",
+            "content_id": null,
+            "errors": null,
+            "id": 1,
+            "input_connections": {},
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "Input1"
+                }
+            ],
+            "label": "Input1",
+            "name": "Input dataset",
+            "outputs": [],
+            "position": {
+                "bottom": -145.5,
+                "height": 61,
+                "left": -398.5,
+                "right": -198.5,
+                "top": -206.5,
+                "width": 200,
+                "x": -398.5,
+                "y": -206.5
+            },
+            "tool_id": null,
+            "tool_state": "{\"optional\": false}",
+            "tool_version": null,
+            "type": "data_input",
+            "uuid": "18cc7f70-ef88-4bbe-9d69-ebd398a7900e",
+            "workflow_outputs": []
+        },
+        "2": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_peptidedb/proteomiqon_peptidedb/0.0.7",
+            "errors": null,
+            "id": 2,
+            "input_connections": {
+                "fasta": {
+                    "id": 1,
+                    "output_name": "output"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "ProteomIQon PeptideDB",
+            "outputs": [
+                {
+                    "name": "out_db",
+                    "type": "sqlite"
+                }
+            ],
+            "position": {
+                "bottom": -74.5859375,
+                "height": 112,
+                "left": -36.0234375,
+                "right": 163.9765625,
+                "top": -186.5859375,
+                "width": 200,
+                "x": -36.0234375,
+                "y": -186.5859375
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_peptidedb/proteomiqon_peptidedb/0.0.7",
+            "tool_shed_repository": {
+                "changeset_revision": "1e5400393797",
+                "name": "proteomiqon_peptidedb",
+                "owner": "galaxyp",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"FixedMods\": null, \"IsotopicMod\": [\"N15\"], \"MassMode\": \"Monoisotopic\", \"MaxMass\": \"15000.0\", \"MaxMissedCleavages\": \"2\", \"MaxPepLength\": \"65\", \"MinMissedCleavages\": \"0\", \"MinPepLength\": \"4\", \"ParseProteinIDRegexPattern\": \"Cre\\\\\\\\S+|QProt_\\\\\\\\S+\", \"Protease\": \"Trypsin\", \"VarModThreshold\": \"4\", \"VariableMods\": [\"Acetylation'ProtNTerm'\", \"Oxidation'Met'\"], \"fasta\": {\"__class__\": \"ConnectedValue\"}, \"outputParamfile\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.0.7",
+            "type": "tool",
+            "uuid": "48e72b51-1a70-4742-8f67-e8aa50c333d2",
+            "workflow_outputs": [
+                {
+                    "label": "peptidedb",
+                    "output_name": "out_db",
+                    "uuid": "eb8773f3-0296-407b-adae-efdc95676a4b"
+                }
+            ]
+        },
+        "3": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_peptidespectrummatching/proteomiqon_peptidespectrummatching/0.0.7",
+            "errors": null,
+            "id": 3,
+            "input_connections": {
+                "instrumentOutput": {
+                    "id": 0,
+                    "output_name": "output"
+                },
+                "peptideDB": {
+                    "id": 2,
+                    "output_name": "out_db"
+                }
+            },
+            "inputs": [],
+            "label": null,
+            "name": "ProteomIQon PeptideSpectrumMatching",
+            "outputs": [
+                {
+                    "name": "out_psm",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 281.40625,
+                "height": 162,
+                "left": 83.7578125,
+                "right": 283.7578125,
+                "top": 119.40625,
+                "width": 200,
+                "x": 83.7578125,
+                "y": 119.40625
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_peptidespectrummatching/proteomiqon_peptidespectrummatching/0.0.7",
+            "tool_shed_repository": {
+                "changeset_revision": "a79a24eb9e76",
+                "name": "proteomiqon_peptidespectrummatching",
+                "owner": "galaxyp",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"Andromeda\": {\"PMin\": \"4\", \"PMax\": \"10\", \"MatchingIonTolerancePPM\": \"100.0\"}, \"ChargeStateDeterminationParams\": {\"ExpectedMinimalCharge\": \"2\", \"ExpectedMaximumCharge\": \"5\", \"Width\": \"1.1\", \"MinIntensity\": \"0.15\", \"DeltaMinIntensity\": \"0.3\", \"NrOfRndSpectra\": \"10000\"}, \"LookUpPPM\": \"30.0\", \"cTerminalSeries\": [\"Y\"], \"instrumentOutput\": {\"__class__\": \"ConnectedValue\"}, \"nTerminalSeries\": [\"B\"], \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.0.7",
+            "type": "tool",
+            "uuid": "fff1e5c9-732b-4836-bad1-1ec2efb3499b",
+            "workflow_outputs": [
+                {
+                    "label": "psm",
+                    "output_name": "out_psm",
+                    "uuid": "747aa58e-4344-4d72-b9ba-0d8d25f7c3f0"
+                }
+            ]
+        },
+        "4": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_psmstatistics/proteomiqon_psmstatistics/0.0.6",
+            "errors": null,
+            "id": 4,
+            "input_connections": {
+                "peptideDB": {
+                    "id": 2,
+                    "output_name": "out_db"
+                },
+                "psm": {
+                    "id": 3,
+                    "output_name": "out_psm"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ProteomIQon PSMStatistics",
+                    "name": "peptideDB"
+                },
+                {
+                    "description": "runtime parameter for tool ProteomIQon PSMStatistics",
+                    "name": "psm"
+                }
+            ],
+            "label": null,
+            "name": "ProteomIQon PSMStatistics",
+            "outputs": [
+                {
+                    "name": "out_qpsm",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 385.3828125,
+                "height": 142,
+                "left": 515.8359375,
+                "right": 715.8359375,
+                "top": 243.3828125,
+                "width": 200,
+                "x": 515.8359375,
+                "y": 243.3828125
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_psmstatistics/proteomiqon_psmstatistics/0.0.6",
+            "tool_shed_repository": {
+                "changeset_revision": "b8590dea5e2d",
+                "name": "proteomiqon_psmstatistics",
+                "owner": "galaxyp",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"ParseProteinIDRegexPattern\": \"id\", \"ThresholdCond\": {\"ProcessingType\": \"Fixed\", \"__current_case__\": 1, \"SequestLike\": \"5.0\", \"Andromeda\": \"40.0\"}, \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"RuntimeValue\"}, \"psm\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.0.6",
+            "type": "tool",
+            "uuid": "609ecc99-e897-45df-82ac-67f7e1b107a1",
+            "workflow_outputs": [
+                {
+                    "label": "qpsm",
+                    "output_name": "out_qpsm",
+                    "uuid": "8b19c445-5b78-4e4d-a23d-04c00c66427d"
+                }
+            ]
+        },
+        "5": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_proteininference/proteomiqon_proteininference/0.0.7",
+            "errors": null,
+            "id": 5,
+            "input_connections": {
+                "PSMInputModeCond|scoredPSMs": {
+                    "id": 4,
+                    "output_name": "out_qpsm"
+                },
+                "peptideDB": {
+                    "id": 2,
+                    "output_name": "out_db"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool ProteomIQon ProteinInference",
+                    "name": "PSMInputModeCond"
+                },
+                {
+                    "description": "runtime parameter for tool ProteomIQon ProteinInference",
+                    "name": "peptideDB"
+                }
+            ],
+            "label": null,
+            "name": "ProteomIQon ProteinInference",
+            "outputs": [
+                {
+                    "name": "out_prot",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 370.40625,
+                "height": 162,
+                "left": 842.2734375,
+                "right": 1042.2734375,
+                "top": 208.40625,
+                "width": 200,
+                "x": 842.2734375,
+                "y": 208.40625
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_proteininference/proteomiqon_proteininference/0.0.7",
+            "tool_shed_repository": {
+                "changeset_revision": "8e4fb95a319a",
+                "name": "proteomiqon_proteininference",
+                "owner": "galaxyp",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"GetQValueCond\": {\"GetQValue\": \"Storey\", \"__current_case__\": 0}, \"GroupFiles\": \"true\", \"PSMInputModeCond\": {\"PSMInputMode\": \"multi\", \"__current_case__\": 1, \"scoredPSMs\": {\"__class__\": \"RuntimeValue\"}}, \"Peptide\": \"Minimal\", \"Protein\": \"Maximal\", \"ProteinIdentifierRegex\": \"\\\\\\\\S+\", \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.0.7",
+            "type": "tool",
+            "uuid": "e284a3c3-1bff-4778-956d-999435bfacc6",
+            "workflow_outputs": [
+                {
+                    "label": "inf",
+                    "output_name": "out_prot",
+                    "uuid": "aca76908-352b-47c1-b06e-706e9bcfd4d9"
+                }
+            ]
+        }
+    },
+    "tags": [],
+    "uuid": "d6a6cd31-7db6-43a9-8b21-8e9888d8cf7a",
+    "version": 1
+}
