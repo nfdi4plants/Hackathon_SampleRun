@@ -13,27 +13,27 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "Input2"
+                    "name": "Input1"
                 }
             ],
-            "label": "Input2",
-            "name": "Input dataset collection",
+            "label": "Input1",
+            "name": "Input dataset",
             "outputs": [],
             "position": {
-                "bottom": 229.140625,
+                "bottom": 83,
                 "height": 61,
-                "left": -387.1640625,
-                "right": -187.1640625,
-                "top": 168.140625,
+                "left": -263,
+                "right": -63,
+                "top": 22,
                 "width": 200,
-                "x": -387.1640625,
-                "y": 168.140625
+                "x": -263,
+                "y": 22
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
+            "tool_state": "{\"optional\": false}",
             "tool_version": null,
-            "type": "data_collection_input",
-            "uuid": "319df1c3-54c3-4c86-9e96-8cbce1ae6565",
+            "type": "data_input",
+            "uuid": "18cc7f70-ef88-4bbe-9d69-ebd398a7900e",
             "workflow_outputs": []
         },
         "1": {
@@ -45,27 +45,27 @@
             "inputs": [
                 {
                     "description": "",
-                    "name": "Input1"
+                    "name": "Input2"
                 }
             ],
-            "label": "Input1",
-            "name": "Input dataset",
+            "label": "Input2",
+            "name": "Input dataset collection",
             "outputs": [],
             "position": {
-                "bottom": -145.5,
+                "bottom": 457.640625,
                 "height": 61,
-                "left": -398.5,
-                "right": -198.5,
-                "top": -206.5,
+                "left": -251.65625,
+                "right": -51.65625,
+                "top": 396.640625,
                 "width": 200,
-                "x": -398.5,
-                "y": -206.5
+                "x": -251.65625,
+                "y": 396.640625
             },
             "tool_id": null,
-            "tool_state": "{\"optional\": false}",
+            "tool_state": "{\"optional\": false, \"collection_type\": \"list\"}",
             "tool_version": null,
-            "type": "data_input",
-            "uuid": "18cc7f70-ef88-4bbe-9d69-ebd398a7900e",
+            "type": "data_collection_input",
+            "uuid": "319df1c3-54c3-4c86-9e96-8cbce1ae6565",
             "workflow_outputs": []
         },
         "2": {
@@ -75,7 +75,7 @@
             "id": 2,
             "input_connections": {
                 "fasta": {
-                    "id": 1,
+                    "id": 0,
                     "output_name": "output"
                 }
             },
@@ -89,14 +89,14 @@
                 }
             ],
             "position": {
-                "bottom": -74.5859375,
+                "bottom": 153.921875,
                 "height": 112,
-                "left": -36.0234375,
-                "right": 163.9765625,
-                "top": -186.5859375,
+                "left": 99.484375,
+                "right": 299.484375,
+                "top": 41.921875,
                 "width": 200,
-                "x": -36.0234375,
-                "y": -186.5859375
+                "x": 99.484375,
+                "y": 41.921875
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_peptidedb/proteomiqon_peptidedb/0.0.7",
@@ -114,7 +114,7 @@
                 {
                     "label": "peptidedb",
                     "output_name": "out_db",
-                    "uuid": "eb8773f3-0296-407b-adae-efdc95676a4b"
+                    "uuid": "f4f0c96f-e00a-4ca3-a062-b29e4343a769"
                 }
             ]
         },
@@ -125,7 +125,7 @@
             "id": 3,
             "input_connections": {
                 "instrumentOutput": {
-                    "id": 0,
+                    "id": 1,
                     "output_name": "output"
                 },
                 "peptideDB": {
@@ -143,14 +143,14 @@
                 }
             ],
             "position": {
-                "bottom": 281.40625,
+                "bottom": 509.90625,
                 "height": 162,
-                "left": 83.7578125,
-                "right": 283.7578125,
-                "top": 119.40625,
+                "left": 219.25,
+                "right": 419.25,
+                "top": 347.90625,
                 "width": 200,
-                "x": 83.7578125,
-                "y": 119.40625
+                "x": 219.25,
+                "y": 347.90625
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_peptidespectrummatching/proteomiqon_peptidespectrummatching/0.0.7",
@@ -168,7 +168,7 @@
                 {
                     "label": "psm",
                     "output_name": "out_psm",
-                    "uuid": "747aa58e-4344-4d72-b9ba-0d8d25f7c3f0"
+                    "uuid": "97016224-41e7-4ba2-8f6b-a59997237b1e"
                 }
             ]
         },
@@ -187,16 +187,7 @@
                     "output_name": "out_psm"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool ProteomIQon PSMStatistics",
-                    "name": "peptideDB"
-                },
-                {
-                    "description": "runtime parameter for tool ProteomIQon PSMStatistics",
-                    "name": "psm"
-                }
-            ],
+            "inputs": [],
             "label": null,
             "name": "ProteomIQon PSMStatistics",
             "outputs": [
@@ -206,14 +197,14 @@
                 }
             ],
             "position": {
-                "bottom": 385.3828125,
+                "bottom": 613.875,
                 "height": 142,
-                "left": 515.8359375,
-                "right": 715.8359375,
-                "top": 243.3828125,
+                "left": 651.328125,
+                "right": 851.328125,
+                "top": 471.875,
                 "width": 200,
-                "x": 515.8359375,
-                "y": 243.3828125
+                "x": 651.328125,
+                "y": 471.875
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_psmstatistics/proteomiqon_psmstatistics/0.0.6",
@@ -223,7 +214,7 @@
                 "owner": "galaxyp",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"ParseProteinIDRegexPattern\": \"id\", \"ThresholdCond\": {\"ProcessingType\": \"Fixed\", \"__current_case__\": 1, \"SequestLike\": \"5.0\", \"Andromeda\": \"40.0\"}, \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"RuntimeValue\"}, \"psm\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"ParseProteinIDRegexPattern\": \"id\", \"ThresholdCond\": {\"ProcessingType\": \"Fixed\", \"__current_case__\": 1, \"SequestLike\": \"5.0\", \"Andromeda\": \"40.0\"}, \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"ConnectedValue\"}, \"psm\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.0.6",
             "type": "tool",
             "uuid": "609ecc99-e897-45df-82ac-67f7e1b107a1",
@@ -231,15 +222,86 @@
                 {
                     "label": "qpsm",
                     "output_name": "out_qpsm",
-                    "uuid": "8b19c445-5b78-4e4d-a23d-04c00c66427d"
+                    "uuid": "0656e02d-fa5b-4516-8f45-e7d79afa4c38"
                 }
             ]
         },
         "5": {
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_proteininference/proteomiqon_proteininference/0.0.7",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_psmbasedquantification/proteomiqon_psmbasedquantification/0.0.7",
             "errors": null,
             "id": 5,
+            "input_connections": {
+                "instrumentOutput": {
+                    "id": 1,
+                    "output_name": "output"
+                },
+                "peptideDB": {
+                    "id": 2,
+                    "output_name": "out_db"
+                },
+                "scoredPSMs": {
+                    "id": 4,
+                    "output_name": "out_qpsm"
+                }
+            },
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Proteomiqon PSMBasedQuantification",
+                    "name": "instrumentOutput"
+                },
+                {
+                    "description": "runtime parameter for tool Proteomiqon PSMBasedQuantification",
+                    "name": "peptideDB"
+                },
+                {
+                    "description": "runtime parameter for tool Proteomiqon PSMBasedQuantification",
+                    "name": "scoredPSMs"
+                }
+            ],
+            "label": null,
+            "name": "Proteomiqon PSMBasedQuantification",
+            "outputs": [
+                {
+                    "name": "out_quant",
+                    "type": "tabular"
+                }
+            ],
+            "position": {
+                "bottom": 423,
+                "height": 172,
+                "left": 980,
+                "right": 1180,
+                "top": 251,
+                "width": 200,
+                "x": 980,
+                "y": 251
+            },
+            "post_job_actions": {},
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_psmbasedquantification/proteomiqon_psmbasedquantification/0.0.7",
+            "tool_shed_repository": {
+                "changeset_revision": "65ce27f0fa01",
+                "name": "proteomiqon_psmbasedquantification",
+                "owner": "galaxyp",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "tool_state": "{\"BaseLineCorrectionCond\": {\"BaseLineCorrectionEnabled\": \"yes\", \"__current_case__\": 0, \"MaxIterations\": \"10\", \"Lambda\": \"6\", \"P\": \"0.05\"}, \"PerformLabeledQuantification\": \"true\", \"XicExtraction\": {\"ScanTimeWindow\": \"2.0\", \"MzWindow_DaTypeCond\": {\"MzWindow_DaType\": \"Fixed\", \"__current_case__\": 0, \"MzWindow_Da\": \"0.7\"}, \"XicProcessing\": {\"ProcessingTypeCond\": {\"ProcessingType\": \"Wavelet\", \"__current_case__\": 1, \"BorderPadding\": null, \"BorderPadMethod\": \"Random\", \"InternalPaddingMethod\": \"LinearInterpolation\", \"HugeGapPaddingMethod\": \"Zero\", \"HugeGapPaddingDistance\": \"100.0\", \"MinPeakDistance\": null, \"MinPeakLength\": \"0.1\", \"MaxPeakLength\": \"1.5\", \"NoiseQuantile\": \"0.01\", \"MinSNR\": \"0.01\"}}, \"TopKPSMs\": null}, \"instrumentOutput\": {\"__class__\": \"RuntimeValue\"}, \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"RuntimeValue\"}, \"scoredPSMs\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_version": "0.0.7",
+            "type": "tool",
+            "uuid": "abb384df-29d5-4de2-8bc7-20bc2e712a29",
+            "workflow_outputs": [
+                {
+                    "label": "quant",
+                    "output_name": "out_quant",
+                    "uuid": "86a636b6-e76f-49ad-9587-0dd3f648d395"
+                }
+            ]
+        },
+        "6": {
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_proteininference/proteomiqon_proteininference/0.0.7",
+            "errors": null,
+            "id": 6,
             "input_connections": {
                 "PSMInputModeCond|scoredPSMs": {
                     "id": 4,
@@ -250,16 +312,7 @@
                     "output_name": "out_db"
                 }
             },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool ProteomIQon ProteinInference",
-                    "name": "PSMInputModeCond"
-                },
-                {
-                    "description": "runtime parameter for tool ProteomIQon ProteinInference",
-                    "name": "peptideDB"
-                }
-            ],
+            "inputs": [],
             "label": null,
             "name": "ProteomIQon ProteinInference",
             "outputs": [
@@ -269,14 +322,14 @@
                 }
             ],
             "position": {
-                "bottom": 370.40625,
+                "bottom": 598.90625,
                 "height": 162,
-                "left": 842.2734375,
-                "right": 1042.2734375,
-                "top": 208.40625,
+                "left": 977.765625,
+                "right": 1177.765625,
+                "top": 436.90625,
                 "width": 200,
-                "x": 842.2734375,
-                "y": 208.40625
+                "x": 977.765625,
+                "y": 436.90625
             },
             "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/proteomiqon_proteininference/proteomiqon_proteininference/0.0.7",
@@ -286,20 +339,20 @@
                 "owner": "galaxyp",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "tool_state": "{\"GetQValueCond\": {\"GetQValue\": \"Storey\", \"__current_case__\": 0}, \"GroupFiles\": \"true\", \"PSMInputModeCond\": {\"PSMInputMode\": \"multi\", \"__current_case__\": 1, \"scoredPSMs\": {\"__class__\": \"RuntimeValue\"}}, \"Peptide\": \"Minimal\", \"Protein\": \"Maximal\", \"ProteinIdentifierRegex\": \"\\\\\\\\S+\", \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+            "tool_state": "{\"GetQValueCond\": {\"GetQValue\": \"Storey\", \"__current_case__\": 0}, \"GroupFiles\": \"true\", \"PSMInputModeCond\": {\"PSMInputMode\": \"multi\", \"__current_case__\": 1, \"scoredPSMs\": {\"__class__\": \"ConnectedValue\"}}, \"Peptide\": \"Minimal\", \"Protein\": \"Maximal\", \"ProteinIdentifierRegex\": \"id\", \"outputParamfile\": \"false\", \"peptideDB\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "0.0.7",
             "type": "tool",
-            "uuid": "e284a3c3-1bff-4778-956d-999435bfacc6",
+            "uuid": "6cea85aa-f2bb-443a-b1da-ce08d2b07e67",
             "workflow_outputs": [
                 {
                     "label": "inf",
                     "output_name": "out_prot",
-                    "uuid": "aca76908-352b-47c1-b06e-706e9bcfd4d9"
+                    "uuid": "4850ce39-ae29-45b4-bb9c-c7622ab1a385"
                 }
             ]
         }
     },
     "tags": [],
-    "uuid": "d6a6cd31-7db6-43a9-8b21-8e9888d8cf7a",
-    "version": 1
+    "uuid": "65eeaf87-1c57-47d3-b75c-3f47bc6636e8",
+    "version": 3
 }
