@@ -7,14 +7,16 @@ requirements:
     InlineJavascriptRequirement: {}
     ShellCommandRequirement: {}
     InitialWorkDirRequirement:
-        listing: 
-            - $(inputs.inputDataFolder)
+        listing:
+            - entryname: inputDataFolder
+              entry: $(inputs.inputDataFolder)
             - $(inputs.workflowInputParams)
             - class: File
               location: ./workflow.ga
             - entryname: history
               entry: "$({class: 'Directory', listing: []})"
               writable: true
+
     NetworkAccess:
       networkAccess: true
 hints:
@@ -42,12 +44,12 @@ arguments:
       prefix: "--galaxy_user_key"
       position: 7    
 inputs:
+    inputDataFolder:
+        type: Directory
     workflowInputParams:
         type: File
         inputBinding:
             position: 2
-    inputDataFolder:
-        type: Directory
 outputs:
     out_dir:
         type: Directory

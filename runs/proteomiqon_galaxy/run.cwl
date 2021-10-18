@@ -4,14 +4,21 @@ class: Workflow
 requirements:
   MultipleInputFeatureRequirement: {}
 inputs:
-    workflowInputParams: File
-    inputDataFolder: Directory
+    Input1: File
+    Input2: File
+
 steps:
+    preprocessing:
+            run: ../../workflows/cwl-galaxy-parser/cwl-galaxy-parser.cwl
+            in:
+                FileInput1: Input1
+                FileInput2: Input2
+            out: [paramFile, inputDataFolder]
     step1:
             run: ../../workflows/proteomiqon_galaxy/planemo_run.cwl
             in:
-                workflowInputParams : workflowInputParams
-                inputDataFolder : inputDataFolder
+                workflowInputParams: preprocessing/paramFile
+                inputDataFolder: preprocessing/inputDataFolder
             out: [out_dir]
 outputs:
     tutorialworkflow:

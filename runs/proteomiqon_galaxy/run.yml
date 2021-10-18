@@ -1,6 +1,6 @@
-workflowInputParams:
+Input1:
   class: File
-  path: proteomiqon_parameters.yml
-inputDataFolder:
-  class: Directory
-  path: ../../assays/sampledata/
+  path: ../../assays/sampledata/sample.fasta
+Input2:
+  class: File
+  path: ../../assays/sampledata/sample.mzlite
